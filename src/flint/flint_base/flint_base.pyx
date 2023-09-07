@@ -97,7 +97,7 @@ cdef class flint_poly(flint_elem):
         return roots
     
     def complex_roots(self):
-        raise AttributeError("Complex roots are not supported for this polynomial")
+        raise NotImplementedError("The method complex_roots is only defined for certain polynomial rings")
 
 
 cdef class flint_mpoly(flint_elem):
